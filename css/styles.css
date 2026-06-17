@@ -152,55 +152,65 @@ footer {
 
 @media (max-width: 768px) {
 
-     /* Dejamos el header fijo arriba */
     .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        flex-direction: row; /* Logo a la izquierda, botón a la derecha */
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        z-index: 1000;
-        transition: transform 0.3s ease; /* Esto servirá para que se oculte suavemente al bajar */
-    }
-
-    /* Forzamos a que el saludo de bienvenida no estorbe en diseño móvil */
-    #bienvenida {
-        display: none !important;
-    }
-
-    .menu-toggle {
-        display: block !important; /* El botón ahora sí es el protagonista */
-        font-size: 1.2rem;
-    }
-
-    /* MENÚ TOTALMENTE OCULTO POR DEFECTO */
-    .navbar {
-        display: none; 
         flex-direction: column;
-        position: absolute; /* Se posiciona justo debajo del header */
-        top: 100%; /* Inicia donde termina el header */
-        left: 0;
-        width: 100%;
-        background-color: #111111;
-        border-bottom: 2px solid #D4AF37;
-        padding: 10px 0;
+        gap: 10px;
+        position: static;
+        padding: 10px;
     }
 
-    /* CUANDO ESTÁ ACTIVO: Se muestra el menú vertical */
+    body {
+        padding-top: 0;
+    }
+
+    .logo h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #bienvenida {
+        display: none;
+    }
+
+    /* BOTÓN MENÚ - CORREGIDO */
+    .menu-toggle {
+        display: block !important; /* Forzamos a que aparezca */
+        margin: 10px auto;        /* Lo centra perfectamente */
+    }
+
+    /* MENÚ OCULTO POR DEFECTO */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* MENÚ VISIBLE CUANDO SE HACE CLIC */
     .navbar.active {
         display: flex;
     }
 
     .navbar a {
-        padding: 15px;
+        padding: 10px;
         margin: 0;
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #222;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .nosotros-contenedor {
+        flex-direction: column;
+    }
+
+    .valores {
+        grid-template-columns: 1fr;
     }
 }
 

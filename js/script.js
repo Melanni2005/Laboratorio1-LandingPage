@@ -68,47 +68,10 @@ if (clienteGuardado) {
 }
 
 /* MENÚ HAMBURGUESA */
-
-const menuToggle =
-    document.getElementById("menuToggle");
-
-const navbar =
-    document.querySelector(".navbar");
+/* MENÚ HAMBURGUESA (Funciona excelente abriendo y cerrando en celular) */
+const menuToggle = document.getElementById("menuToggle");
+const navbar = document.querySelector(".navbar");
 
 menuToggle.addEventListener("click", function () {
-
     navbar.classList.toggle("active");
-
-});
-
-/* EFECTO: Ocultar barra al bajar, mostrar al subir (SOLO EN CELULARES) */
-let ultimaPosicionScroll = window.scrollY;
-const header = document.querySelector(".header");
-
-window.addEventListener("scroll", function() {
-    // Detectamos el ancho de la pantalla actual
-    let anchoPantalla = window.innerWidth;
-
-    // SI LA PANTALLA ES MAYOR A 768px (PC/Laptop), NO HACE NADA Y SE QUEDA ESTÁTICA
-    if (anchoPantalla > 768) {
-        header.style.transform = "translateY(0)";
-        return; // Detiene la función aquí para la PC
-    }
-
-    // SI LA PANTALLA ES MENOR O IGUAL A 768px (Celular), CORRE EL EFECTO:
-    let posicionActualScroll = window.scrollY;
-
-    if (ultimaPosicionScroll < posicionActualScroll && posicionActualScroll > 100) {
-        // Si bajas en celular, se esconde
-        header.style.transform = "translateY(-100%)";
-        
-        if (typeof navbar !== 'undefined') {
-            navbar.classList.remove("active");
-        }
-    } else {
-        // Si subes en celular, aparece
-        header.style.transform = "translateY(0)";
-    }
-    
-    ultimaPosicionScroll = posicionActualScroll;
 });
