@@ -173,7 +173,8 @@ footer {
     }
 
     .menu-toggle {
-        display: block; /* El botón ahora sí es el protagonista */
+        display: block !important; /* El botón ahora sí es el protagonista */
+        font-size: 1.2rem;
     }
 
     /* MENÚ TOTALMENTE OCULTO POR DEFECTO */
