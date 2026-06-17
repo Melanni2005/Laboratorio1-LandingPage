@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Reserva Gourmet</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            <h1>La Reserva Gourmet</h1>
+        </div>
+
+        <p id="bienvenida"></p>
+
+        <nav class="navbar" aria-label="Menú principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#especialidades">Especialidades</a>
+            <a href="#galeria">Galería</a>
+            <a href="#reservaciones">Reservaciones</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+
+    <main>
+
+        <!-- HERO -->
+
+        <section id="inicio" class="hero">
+
+            <h2> La Excelencia de la Parrilla</h2>
+
+            <p>
+                 Descubra los mejores cortes premium preparados por expertos parrilleros
+    en un ambiente elegante, exclusivo y sofisticado.
+            </p>
+
+            <a href="#" class="btn">
+                Reservar Mesa
+            </a>
+
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+
+        <section id="nosotros" class="sobre-nosotros">
+
+    <div class="nosotros-contenedor">
+
+        <div class="nosotros-imagen">
+
+            <img src="img/nosotros.jpg"
+                 alt="Chef preparando cortes premium">
+
+        </div>
+
+        <div class="nosotros-texto">
+
+            <h2>Nuestra Historia</h2>
+
+            <p>
+                En La Reserva Gourmet creemos que una experiencia gastronómica
+                excepcional comienza con ingredientes de calidad y una pasión
+                inquebrantable por la excelencia.
+            </p>
+
+            <p>
+                Nuestro restaurante nace con el propósito de ofrecer cortes
+                premium cuidadosamente seleccionados, preparados por expertos
+                parrilleros y servidos en un ambiente elegante y acogedor.
+            </p>
+
+            <div class="valores">
+
+                <div class="valor">
+                    <h3>🥩 Calidad Premium</h3>
+                    <p>Cortes seleccionados de la más alta calidad.</p>
+                </div>
+
+                <div class="valor">
+                    <h3>🔥 Parrilla Artesanal</h3>
+                    <p>Técnicas tradicionales con sabor auténtico.</p>
+                </div>
+
+                <div class="valor">
+                    <h3>🍷 Ambiente Exclusivo</h3>
+                    <p>Elegancia y comodidad en cada visita.</p>
+                </div>
+
+                <div class="valor">
+                    <h3>⭐ Servicio Distinguido</h3>
+                    <p>Atención personalizada para cada cliente.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- ESPECIALIDADES -->
+
+        <section id="especialidades" class="especialidades">
+
+    <h2>Nuestras Especialidades</h2>
+
+    <div class="grid-cortes">
+
+        <article class="corte">
+            <h3>Tomahawk Premium</h3>
+            <p>Corte grueso con hueso y sabor intenso.</p>
+        </article>
+
+        <article class="corte">
+            <h3>Ribeye Angus</h3>
+            <p>Marmoleo perfecto y jugosidad excepcional.</p>
+        </article>
+
+        <article class="corte">
+            <h3>T-Bone Steak</h3>
+            <p>La combinación ideal entre suavidad y sabor.</p>
+        </article>
+
+        <article class="corte">
+            <h3>Filet Mignon</h3>
+            <p>Uno de los cortes más tiernos y exclusivos.</p>
+        </article>
+
+        <article class="corte">
+            <h3>Picanha Especial</h3>
+            <p>Tradición y sabor con un toque gourmet.</p>
+        </article>
+
+        <article class="corte">
+            <h3>New York Strip</h3>
+            <p>Textura firme y sabor intenso a la parrilla.</p>
+        </article>
+
+    </div>
+
+</section>
+
+        <!-- GALERÍA -->
+
+      <section id="galeria" class="galeria">
+
+    <h2>Galería Gourmet</h2>
+
+    <div class="grid-galeria">
+
+        <img src="img/galeria1.jpg"
+             alt="Tomahawk premium a la parrilla">
+
+        <img src="img/galeria2.jpg"
+             alt="Ribeye gourmet servido">
+
+        <img src="img/galeria3.jpg"
+             alt="Parrilla profesional encendida">
+
+        <img src="img/galeria4.jpg"
+             alt="Interior elegante del restaurante">
+
+        <img src="img/galeria5.jpg"
+             alt="Chef preparando un corte premium">
+
+        <img src="img/galeria6.jpg"
+             alt="Plato gourmet terminado">
+
+    </div>
+
+</section>
+
+        <!-- RESERVACIONES -->
+
+        <section id="reservaciones" class="reservaciones">
+
+            <h2>Reserva tu Experiencia</h2>
+
+    <p>
+        Complete el siguiente formulario para reservar una mesa en
+        La Reserva Gourmet.
+    </p>
+
+    <form id="formReserva" class="form-reserva">
+ <div class="campo">
+        <label for="nombre">Nombre Completo</label>
+        <input
+    type="text"
+    id="nombre"
+    aria-label="Nombre Completo"
+    required>
+    </div>
+
+    <div class="campo">
+        <label for="correo">Correo Electrónico</label>
+        <input
+    type="email"
+    id="correo"
+    aria-label="Correo Electrónico"
+    required>
+    </div>
+
+    <div class="campo">
+        <label for="fecha">Fecha</label>
+        <input
+        type="date"
+        id="fecha"
+        aria-label="Fecha de Reservación"
+        required>
+    </div>
+
+    <div class="campo">
+        <label for="hora">Hora</label>
+        <input
+        type="time"
+        id="hora"
+        aria-label="Hora de Reservación"
+        required>
+    </div>
+
+    <div class="campo">
+        <label for="personas">Cantidad de Personas</label>
+        <input
+        type="number"
+        id="personas"
+        aria-label="Cantidad de Personas"
+        min="1"
+        max="20"
+        required>
+    </div>
+
+   <button type="submit">
+    Reservar Mesa
+</button>
+
+<p id="mensaje-reserva"></p>
+
+</form>
+
+</section>
+
+    </main>
+
+
+<section id="contacto" class="contacto">
+
+    <h2>Contáctenos</h2>
+
+    <p>📍 Dirección: San José, Costa Rica</p>
+
+    <p>📞 Teléfono: +506 2222-2222</p>
+
+    <p>📧 Correo: info@lareservagourmet.com</p>
+
+</section>
+
+ <!-- ASIDE -->
+
+    <aside>
+
+        <h3>Horario</h3>
+
+        <p>
+            Lunes a Domingo
+        </p>
+
+        <p>
+            12:00 m.d. - 10:00 p.m.
+        </p>
+
+    </aside>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 La Reserva Gourmet. Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
