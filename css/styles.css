@@ -152,52 +152,68 @@ footer {
 
 @media (max-width: 768px) {
 
-    .header {
+      .header {
         flex-direction: column;
-        gap: 20px;
-
+        gap: 10px;
         position: static;
+        padding: 10px;
     }
 
     body {
-    padding-top: 0;
-    }
-
-    .navbar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    }
-
-    .navbar a {
-    margin: 0;
-    font-size: 0.9rem;
+        padding-top: 0;
     }
 
     .logo h1 {
-    font-size: 1.5rem;
-    text-align: center;
-}
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
-#bienvenida {
-    text-align: center;
-    margin: 10px 0;
-}
+    #bienvenida {
+        display: none;
+    }
+
+    /* BOTÓN MENÚ */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* MENÚ OCULTO POR DEFECTO */
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* MENÚ VISIBLE CUANDO SE HACE CLIC */
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        padding: 10px;
+        margin: 0;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
 
     .hero h2 {
         font-size: 2rem;
     }
 
     .nosotros-contenedor {
-    flex-direction: column;
-}
+        flex-direction: column;
+    }
 
-.valores {
-    grid-template-columns: 1fr;
-}
-
+    .valores {
+        grid-template-columns: 1fr;
+    }
 }
 
 
@@ -433,4 +449,24 @@ button:focus,
 input:focus {
     outline: 3px solid #D4AF37;
     outline-offset: 3px;
+}
+
+/* MENÚ HAMBURGUESA */
+
+.menu-toggle {
+    display: none;
+
+    background-color: #D4AF37;
+
+    color: black;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
 }
