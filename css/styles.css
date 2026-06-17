@@ -152,67 +152,54 @@ footer {
 
 @media (max-width: 768px) {
 
-      .header {
-        flex-direction: column;
-        gap: 10px;
-        position: static;
-        padding: 10px;
+     /* Dejamos el header fijo arriba */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row; /* Logo a la izquierda, botón a la derecha */
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        z-index: 1000;
+        transition: transform 0.3s ease; /* Esto servirá para que se oculte suavemente al bajar */
     }
 
-    body {
-        padding-top: 0;
-    }
-
-    .logo h1 {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
+    /* Forzamos a que el saludo de bienvenida no estorbe en diseño móvil */
     #bienvenida {
-        display: none;
+        display: none !important;
     }
-
-    /* BOTÓN MENÚ */
 
     .menu-toggle {
-        display: block;
+        display: block; /* El botón ahora sí es el protagonista */
     }
 
-    /* MENÚ OCULTO POR DEFECTO */
-
+    /* MENÚ TOTALMENTE OCULTO POR DEFECTO */
     .navbar {
-        display: none;
+        display: none; 
         flex-direction: column;
+        position: absolute; /* Se posiciona justo debajo del header */
+        top: 100%; /* Inicia donde termina el header */
+        left: 0;
         width: 100%;
-        text-align: center;
+        background-color: #111111;
+        border-bottom: 2px solid #D4AF37;
+        padding: 10px 0;
     }
 
-    /* MENÚ VISIBLE CUANDO SE HACE CLIC */
-
+    /* CUANDO ESTÁ ACTIVO: Se muestra el menú vertical */
     .navbar.active {
         display: flex;
     }
 
     .navbar a {
-        padding: 10px;
+        padding: 15px;
         margin: 0;
-        font-size: 0.9rem;
-    }
-
-    .hero {
-        padding: 80px 20px;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .nosotros-contenedor {
-        flex-direction: column;
-    }
-
-    .valores {
-        grid-template-columns: 1fr;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #222;
     }
 }
 
