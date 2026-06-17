@@ -84,8 +84,9 @@ body {
     justify-content: center;
     align-items: center;
 
+    /* Control de la imagen de fondo */
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 
     transition: background-image 1s ease-in-out;
@@ -114,6 +115,7 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -146,6 +148,18 @@ footer {
     text-align: center;
     padding: 25px;
     border-top: 2px solid #D4AF37;
+}
+
+/* 1. ESTILOS GENERALES DEL BOTÓN (Ponlo antes del media query) */
+.menu-toggle {
+    display: none; /* En PC empieza oculto, correcto */
+    background-color: #D4AF37;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* RESPONSIVE */
@@ -198,7 +212,10 @@ footer {
     }
 
     .hero {
-        padding: 80px 20px;
+       padding: 80px 20px;  /* Reducimos el espaciado interno excesivo */
+        min-height: 50vh;    /* Ajustamos la altura para que la imagen no se estire horizontalmente */
+        background-size: cover;
+        background-position: center top; /* Centra la vista en la parte superior/media de la carne */
     }
 
     .hero h2 {
@@ -207,6 +224,19 @@ footer {
 
     .nosotros-contenedor {
         flex-direction: column;
+        gap: 20px; /* Reduce el espacio exagerado entre la imagen y el texto */
+    }
+
+    /* ¡ESTO CONECTA Y ENCIENDE LA IMAGEN EN CELULARES! */
+    .nosotros-imagen, .nosotros-texto {
+        width: 100%;
+        flex: none; /* Desactiva el comportamiento de PC */
+    }
+
+    .nosotros-imagen img {
+        width: 100%;
+        height: auto; /* Asegura que mantenga su proporción original */
+        display: block;
     }
 
     .valores {
@@ -447,24 +477,4 @@ button:focus,
 input:focus {
     outline: 3px solid #D4AF37;
     outline-offset: 3px;
-}
-
-/* MENÚ HAMBURGUESA */
-
-.menu-toggle {
-    display: none;
-
-    background-color: #D4AF37;
-
-    color: black;
-
-    border: none;
-
-    padding: 10px 20px;
-
-    border-radius: 5px;
-
-    font-weight: bold;
-
-    cursor: pointer;
 }
