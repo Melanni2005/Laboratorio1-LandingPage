@@ -473,7 +473,7 @@ footer,
    ========================================================================== */
 body.light-theme {
     background-color: #ffffff;
-    color: #111111; 
+    color: #111111;
 }
 
 /* Completar el tema claro para el Header */
@@ -504,11 +504,13 @@ body.light-theme .hero {
     color: #ffffff;
 }
 
-/* Forzar contraste alto en textos informativos generales */
-body.light-theme p,
+/* 🌟 SOLUCIÓN: Regla corregida para excluir explícitamente el párrafo del Hero */
+body.light-theme .sobre-nosotros p,
+body.light-theme .nosotros-texto p,
 body.light-theme .corte p,
 body.light-theme aside p,
 body.light-theme footer p,
+body.light-theme .reservaciones p,
 body.light-theme form label {
     color: #222222 !important; 
     font-weight: 500;          
