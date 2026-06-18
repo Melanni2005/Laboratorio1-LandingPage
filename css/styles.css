@@ -89,7 +89,7 @@ body {
     max-width: 700px;
     margin: auto;
     /* 🌟 El texto siempre será blanco con sombra para máxima legibilidad */
-    color: #ffffff;
+    color: #ffffff !important;
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
@@ -261,11 +261,19 @@ section h2 {
     margin-bottom: 10px;
 }
 
-/* Para hacer que horario se vea mejor */
-aside {
+/* Para hacer que horario y footer se vean mejor */
+aside, footer {
     text-align: center;
-    padding: 50px 20px;
+    padding: 30px 20px;
+}
+
+aside {
     background-color: #1a1a1a;
+}
+
+footer {
+    background-color: #0a0a0a; /* Fondo elegante para los derechos */
+    font-size: 0.9rem;
 }
 
 aside h3 {
@@ -365,8 +373,8 @@ footer,
 .valor,
 .form-reserva input,
 .navbar a,
-.btn-tema,      /* 🌟 Agregado para consistencia */
-.menu-toggle {  /* 🌟 Agregado para consistencia */
+.btn-tema,      
+.menu-toggle {  
     transition:
         background-color 0.3s ease,
         color 0.3s ease,
@@ -483,7 +491,6 @@ body.light-theme #bienvenida {
 }
 
 /* Fondos corregidos con las clases reales de tus secciones */
-body.light-theme .hero,
 body.light-theme .especialidades,
 body.light-theme .reservaciones,
 body.light-theme aside,
@@ -492,7 +499,12 @@ body.light-theme footer {
     color: #111111;
 }
 
-/* Forzar contraste alto en textos informativos (Sin el Hero p) */
+/* El fondo del Hero en tema claro se mantiene igual */
+body.light-theme .hero {
+    color: #ffffff;
+}
+
+/* Forzar contraste alto en textos informativos generales */
 body.light-theme p,
 body.light-theme .corte p,
 body.light-theme aside p,
