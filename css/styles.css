@@ -162,6 +162,23 @@ footer {
     cursor: pointer;
 }
 
+/* 🌓 AQUÍ PEGAS EL NUEVO BOTÓN DE TEMA */
+.btn-tema {
+    background-color: transparent;
+    color: #D4AF37; 
+    border: 1px solid #D4AF37;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-tema:hover {
+    background-color: #D4AF37;
+    color: #000000; 
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -188,8 +205,13 @@ footer {
 
     /* BOTÓN MENÚ - CORREGIDO */
     .menu-toggle {
-        display: block !important; /* Forzamos a que aparezca */
-        margin: 10px auto;        /* Lo centra perfectamente */
+       display: inline-block !important; /* Cambiado a inline-block para que se alinee con el otro */
+        margin: 10px 5px;                /* Margen pequeño a los lados para que no se peguen */
+    }
+
+    .btn-tema {
+        display: inline-block;           /* Hace que aparezca a la par del botón de menú */
+        margin: 10px 5px;                /* Mismo margen para que queden simétricos */
     }
 
     /* MENÚ OCULTO POR DEFECTO */
@@ -477,4 +499,24 @@ button:focus,
 input:focus {
     outline: 3px solid #D4AF37;
     outline-offset: 3px;
+}
+
+/* Cambia el color */
+/* Clase para el Tema Claro */
+body.light-theme {
+    background-color: #ffffff;
+    color: #1a1a1a;
+}
+
+/* Cambiar el fondo de las secciones cuando el tema claro esté activo */
+body.light-theme .hero,
+body.light-theme .especialidades-seccion,
+body.light-theme .reservas-seccion {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+}
+
+/* Forzar a que los textos de los párrafos sean oscuros en tema claro */
+body.light-theme p {
+    color: #333333;
 }
