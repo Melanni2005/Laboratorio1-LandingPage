@@ -80,12 +80,17 @@ body {
     font-size: 3rem;
     color: #D4AF37;
     margin-bottom: 20px;
+    /* 🌟 Sombra para resaltar el título sobre cualquier imagen */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 .hero p {
     font-size: 1.2rem;
     max-width: 700px;
     margin: auto;
+    /* 🌟 El texto siempre será blanco con sombra para máxima legibilidad */
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
 /* BOTÓN */
@@ -368,6 +373,7 @@ footer,
         border-color 0.3s ease,
         box-shadow 0.3s ease;
 }
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
@@ -486,9 +492,8 @@ body.light-theme footer {
     color: #111111;
 }
 
-/* Forzar contraste alto en textos informativos */
+/* Forzar contraste alto en textos informativos (Sin el Hero p) */
 body.light-theme p,
-body.light-theme .hero p,
 body.light-theme .corte p,
 body.light-theme aside p,
 body.light-theme footer p,
