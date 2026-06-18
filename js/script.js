@@ -72,18 +72,26 @@ menuToggle.addEventListener("click", function () {
 const themeToggle = document.getElementById('themeToggle');
 const body = document.body;
 
+// 1. Revisar qué tema estaba guardado al cargar la página
 const temaGuardado = localStorage.getItem('tema');
 
 if (temaGuardado === 'claro') {
     body.classList.add('light-theme');
+    themeToggle.textContent = '🌙 Tema Oscuro'; // Si carga claro, el botón ofrece cambiar a oscuro
+} else {
+    themeToggle.textContent = '☀️ Tema Claro';  // Si carga oscuro (defecto), ofrece cambiar a claro
 }
 
+// 2. Escuchar el clic del botón
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     
+    // 3. Modificar el texto del botón y guardar en LocalStorage según la clase activa
     if (body.classList.contains('light-theme')) {
         localStorage.setItem('tema', 'claro');
+        themeToggle.textContent = '🌙 Tema Oscuro'; // Ahora el botón servirá para volver a oscuro
     } else {
         localStorage.setItem('tema', 'oscuro');
+        themeToggle.textContent = '☀️ Tema Claro';  // Ahora el botón servirá para ir a claro
     }
 });

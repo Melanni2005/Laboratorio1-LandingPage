@@ -502,21 +502,40 @@ input:focus {
 }
 
 /* Cambia el color */
-/* Clase para el Tema Claro */
+/* ==========================================================================
+   CLASES PARA EL TEMA CLARO (Contraste corregido)
+   ========================================================================== */
+
 body.light-theme {
     background-color: #ffffff;
-    color: #1a1a1a;
+    color: #111111; /* Negro casi puro para el texto general */
 }
 
-/* Cambiar el fondo de las secciones cuando el tema claro esté activo */
+/* Forzar fondos claros en las secciones principales */
 body.light-theme .hero,
 body.light-theme .especialidades-seccion,
-body.light-theme .reservas-seccion {
-    background-color: #f4f4f4;
-    color: #1a1a1a;
+body.light-theme .reservas-seccion,
+body.light-theme aside,
+body.light-theme footer {
+    background-color: #f9f9f9; 
+    color: #111111;
 }
 
-/* Forzar a que los textos de los párrafos sean oscuros en tema claro */
-body.light-theme p {
-    color: #333333;
+/* 🎯 CORRECCIÓN DE CONTRASTE: Forzar a todos los párrafos y descripciones a ser oscuros */
+body.light-theme p,
+body.light-theme .hero p,
+body.light-theme .corte-tarjeta p,
+body.light-theme aside p,
+body.light-theme footer p,
+body.light-theme form label {
+    color: #222222 !important; /* El !important asegura que sobrescriba el color gris viejo */
+    font-weight: 500;          /* Le da un poquito más de grosor para que sea super legible */
+}
+
+/* Modificar las tarjetas del menú para que tengan un fondo blanco limpio en tema claro */
+body.light-theme .corte-tarjeta,
+body.light-theme .valores .tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
