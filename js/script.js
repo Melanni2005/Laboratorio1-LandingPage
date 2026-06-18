@@ -77,21 +77,21 @@ const temaGuardado = localStorage.getItem('tema');
 
 if (temaGuardado === 'claro') {
     body.classList.add('light-theme');
-    themeToggle.textContent = '🌙 Tema Oscuro'; // Si carga claro, el botón ofrece cambiar a oscuro
+    themeToggle.textContent = '🌙 Tema Oscuro'; // Si la página es blanca, el botón ofrece volver a oscuro
 } else {
-    themeToggle.textContent = '☀️ Tema Claro';  // Si carga oscuro (defecto), ofrece cambiar a claro
+    themeToggle.textContent = '☀️ Tema Claro';  // Si la página es negra (defecto), ofrece cambiar a claro
 }
 
 // 2. Escuchar el clic del botón
 themeToggle.addEventListener('click', () => {
     body.classList.toggle('light-theme');
     
-    // 3. Modificar el texto del botón y guardar en LocalStorage según la clase activa
+    // 3. Modificar el texto del botón y guardar en LocalStorage de forma correcta
     if (body.classList.contains('light-theme')) {
         localStorage.setItem('tema', 'claro');
-        themeToggle.textContent = '🌙 Tema Oscuro'; // Ahora el botón servirá para volver a oscuro
+        themeToggle.textContent = '🌙 Tema Oscuro'; // Cambió a blanco -> El botón ofrece el oscuro
     } else {
         localStorage.setItem('tema', 'oscuro');
-        themeToggle.textContent = '☀️ Tema Claro';  // Ahora el botón servirá para ir a claro
+        themeToggle.textContent = '☀️ Tema Claro';  // Cambió a negro -> El botón ofrece el claro
     }
 });
